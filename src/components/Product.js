@@ -50,7 +50,7 @@ const Product = (props) => {
             <strong>${product.price}</strong>
           </CardText>
 
-          <Button onClick={addFunc} color="info">
+          <Button data-testid="addtocart" onClick={addFunc} color="info">
             Add To Cart
           </Button>
         </CardBody>

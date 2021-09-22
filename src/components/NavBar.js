@@ -65,8 +65,8 @@ const NavBar = (props) => {
             ReactCart
           </h1>
           <Nav className="ml-auto" navbar>
-            <IconButton onClick={props.handleDrawerOpen}>
-              <StyledBadge
+            <IconButton data-testid="cart-button" onClick={props.handleDrawerOpen}>
+              <StyledBadge data-testid="cart-icon"
                 badgeContent={props.addedItems.reduce(
                   (accumulator, currentValue) =>
                     accumulator + currentValue.quantity,

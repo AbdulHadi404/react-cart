@@ -12,6 +12,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import { getAllProducts } from "../actions/homepageActions";
 
 const Homepage = (props) => {
+  // console.log(props)
   const [size, setSize] = useState("");
   const [price, setPrice] = useState(320);
   const [open, setOpen] = useState(false);
@@ -82,22 +83,22 @@ const Homepage = (props) => {
                 marginRight: "10px",
               }}
             >
-              <h3>Filters:</h3>
+              <h3 >Filters:</h3>
               <Label
                 for="priceRange"
                 style={{
                   marginTop: "20px",
                 }}
               >
-                <span style={{ marginRight: "5px" }}>Max Price: </span>${price}
+                <span style={{ marginRight: "5px" }}>Max Price: </span>$<p style={{ display: 'inline' }} data-testid="price">{price}</p>
               </Label>
               <ThemeProvider theme={muiTheme}>
                 <Slider
                   aria-labelledby="discrete-slider"
                   valueLabelDisplay="auto"
                   onChange={(e, v) => {
-                    console.log("test");
-                    console.log(v);
+                    // console.log("test");
+                    // console.log(v);
                     setPrice(v);
                   }}
                   step={10}
@@ -105,6 +106,7 @@ const Homepage = (props) => {
                   min={110}
                   marks={marks}
                   defaultValue={320}
+                  data-id="slider"
                 />
               </ThemeProvider>
 
