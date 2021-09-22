@@ -37,7 +37,7 @@ it('should check if slected size changes after each selection', () => {
 //     expect(CartButton) // use fireEvent to toggle, then check for a true case and a false case // todo
 // })
 
-// FAILING TEST (will pass)
+// FAILING TEST 
 it('should render cart-icon 0 as hidden', () => {
     render(<Provider store={store}><Homepage /></Provider>);
     const cartIcon = screen.getByTestId('cart-icon')
@@ -46,11 +46,11 @@ it('should render cart-icon 0 as hidden', () => {
     // expect(cartIcon).toBeInTheDocument(false) // should not be in the document  
 })
 
-// FAILING TEST (will pass)
-it('should update cart-icon value when Add To Cart is clicked', () => {
+// FAILING TEST 
+it('should update cart-icon value when Add To Cart is clicked', async () => {
     render(<Provider store={store}><Homepage /></Provider>);
     const cartIcon = screen.getByTestId('cart-icon')
-    const AddToCart = screen.getByTestId('addtocart') // this is not working need a workaround for getting the addtocart button in the constant
+    const AddToCart = await screen.findByTestId('addtocart') // this is not working need a workaround for getting the addtocart button in the constant
     fireEvent.click(AddToCart)
-    expect(cartIcon.textContent).toBe("0")
+    expect(cartIcon.textContent).toBe("1")
 })
