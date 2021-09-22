@@ -37,7 +37,7 @@ it('should check if slected size changes after each selection', () => {
 //     expect(CartButton) // use fireEvent to toggle, then check for a true case and a false case // todo
 // })
 
-// FAILING TEST
+// FAILING TEST (will pass)
 it('should render cart-icon 0 as hidden', () => {
     render(<Provider store={store}><Homepage /></Provider>);
     const cartIcon = screen.getByTestId('cart-icon')
@@ -46,7 +46,7 @@ it('should render cart-icon 0 as hidden', () => {
     // expect(cartIcon).toBeInTheDocument(false) // should not be in the document  
 })
 
-// FAILING TEST
+// FAILING TEST (will pass)
 it('should update cart-icon value when Add To Cart is clicked', () => {
     render(<Provider store={store}><Homepage /></Provider>);
     const cartIcon = screen.getByTestId('cart-icon')
