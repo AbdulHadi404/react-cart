@@ -42,7 +42,7 @@ it('should check if slected size changes after each selection', () => {
 //     render(<MockHomePage/>);
 //     const CartButton = screen.getByTestId('cart-button')
 //     fireEvent.click(CartButton)
-//     expect(screen.getBy).toBeVisible // use fireEvent to toggle, then check for a true case and a false case // todo
+//     expect(screen.).toBeVisible // use fireEvent to toggle, then check for a true case and a false case // todo
 // })
 
 // FAILING TEST 
@@ -54,7 +54,6 @@ it('should check if slected size changes after each selection', () => {
 //     // expect(cartIcon).toBeInTheDocument(false) // should not be in the document  
 // })
 
-// FAILING TEST 
 it('should update cart-icon value when Add To Cart is clicked', () => {
     render(<MockHomePage />);
     const AddToCart = screen.queryAllByTestId('addtocart')[1] // this is not working need a workaround for getting the addtocart button in the constant
